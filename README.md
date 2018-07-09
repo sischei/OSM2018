@@ -10,7 +10,7 @@ Open Source Macroeconomics Laboratory Bootcamp (BFI, University of Chicago) June
 ### Purpose of the lecture
 
 Parallel computation has, next to theory and experiments, become in many fields a well-established and recognized third pillar of science within the last couple of years. 
-The emerging computing power available to researchers nowadays reaches up to Petaflop/s,
+The emerging computing power available to researchers nowadays reaches up to hundreds of Petaflop/s,
 which is several million times faster than an average laptop. 
 This allows for computer-aided discoveries that would otherwise be impossible. Also in modern quantitative economics and 
 finance, parallel computing has become a key workhorse. Indeed, processing for example enormous sets of data in a timely 
