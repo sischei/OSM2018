@@ -8,7 +8,7 @@ unzip spinterp_v5.1.1.zip
 echo " SPINTERP is unpacked "
 
 # unpack and compile Tasmanian Sparse grid library, and test python example
-unzip TasmanianSparseGrids_v4.0.zip
+unzip TasmanianSparseGrids.zip
 cd TasmanianSparseGrids
 make
 # cd InterfacePython
