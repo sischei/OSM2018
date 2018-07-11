@@ -1,33 +1,30 @@
-// #include <iostream>
-#include <random>
 #include <stdio.h>
-
-
-//generate random numbers in [0,1]
-#include <iostream>
-using namespace std;
-
+#include <stdlib.h>
+#include <math.h>
+ 
 int main()
 {
-  
-//!.....uniform distributed [0..1]	
-	unsigned seed_unif1 = 3;
-	std::default_random_engine generator_unif(seed_unif1);
-	std::uniform_real_distribution<double> distribution_unif(0.0,1.0);
-
-	int No_random_numbers = 10;
-	double rand_number;
-	
-	
-//!.....generate No_random_numbers 		
-	for(int numbers = 1; numbers <=No_random_numbers; numbers++)
-	{
-	  rand_number = distribution_unif(generator_unif);
-	  cout << "random number i = "  << numbers << " has value " << rand_number << endl;  
-	}
-	
-	
-  return 0;
+    double niter = 10000000;
+    double x,y;
+    int i;
+    int count=0;
+    double z;
+    double pi;
+    //srand(time(NULL));
+    //main loop
+    for (i=0; i<niter; ++i)
+    {
+        //get random points
+        x = (double)random()/RAND_MAX;
+        y = (double)random()/RAND_MAX;
+        z = sqrt((x*x)+(y*y));
+        //check to see if point is in unit circle
+        if (z<=1)
+        {
+            ++count;
+        }
+    }
+    pi = ((double)count/(double)niter)*4.0;          //p = 4(m/n)
+    printf("Pi: %f\n", pi);
+    return 0;
 }
-
-
