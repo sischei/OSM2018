@@ -1,0 +1,24 @@
+# Edit these variables.
+MEXSUFFIX   = mexglx
+MEX         = mex
+CXX         = g++
+PARDISOHOME = $(HOME)/pardiso/lib
+
+# Do not edit anything past here (unless you know what you're doing).
+MEXFLAGS   = -cxx CXX=$(CXX) CC=$(CXX) LD=$(CXX)            \
+             -L$(PARDISOHOME) -lpardiso -lmwlapack -lmwblas \
+             -lgfortran -lpthread -lm
+
+TARGETS = pardisoinit.$(MEXSUFFIX) pardisoreorder.$(MEXSUFFIX) \
+          pardisofactor.$(MEXSUFFIX) pardisosolve.$(MEXSUFFIX) \
+          pardisofree.$(MEXSUFFIX)
+
+all: $(TARGETS)
+
+%.$(MEXSUFFIX): %.cpp common.cpp matlabmatrix.cpp sparsematrix.cpp \
+                pardisoinfo.cpp
+	$(MEX) $(MEXFLAGS) -output $@ $^
+
+clean:
+	rm -f $(TARGETS)
+

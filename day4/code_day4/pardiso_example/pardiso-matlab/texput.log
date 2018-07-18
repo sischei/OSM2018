@@ -1,0 +1,16 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=mex 2012.7.25)  1 AUG 2017 14:41
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**CXX=g++ CC=g++ LD=g++ -largeArrayDims -L/home/simonsch/homework/pardiso_examp
+le/lib -lpardiso -lmwlapack -lmwblas /usr/lib64/libgomp.so.1 -lgfortran -lpthre
+ad -lm -Wl,--rpath,/home/simonsch/homework/pardiso_example/lib -output pardisoi
+nit pardisoinit.cpp common.cpp matlabmatrix.cpp sparsematrix.cpp pardisoinfo.cp
+p
+
+! Emergency stop.
+<*> CXX=g++ 
+            CC=g++ LD=g++ -largeArrayDims -L/home/simonsch/homework/pardiso_...
+End of file on the terminal!
+
+No pages of output.
